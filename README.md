@@ -12,5 +12,5 @@ your currently best off looking at other places for pvz2 modding tools.
 3. use a json file with those file names and add them back into the obb  
 # coming soon
 repacking the obb  
-packing/unpacking .rsgp (aka .pgsr) files
+packing/unpacking .rsgp (aka .pgsr) files  
 look at converting ptx files to pngs
