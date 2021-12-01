@@ -13,4 +13,4 @@ your currently best off looking at other places for pvz2 modding tools.
 # coming soon
 repacking the obb  
 packing/unpacking .rsgp (aka .pgsr) files  
-look at converting ptx files to pngs
+(maybe) converting ptx files to pngs
