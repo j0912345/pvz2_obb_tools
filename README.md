@@ -15,4 +15,6 @@ repacking the obb
 packing/unpacking .rsgp (aka .pgsr) files  
 (maybe) converting .ptx files to .pngs
 # credits/thanks to:
-the plants vs zombies 2 quickbms script for helping me learn how the obb contains offsets and learn how the headers work
+the plants vs zombies 2 quickbms script for:  
+helping me learn how the obb contains offsets.  
+being a good lead for information like how rsgp (aka pgsr) files are compressed. (with zlib)
