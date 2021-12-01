@@ -14,3 +14,5 @@ your currently best off looking at other places for pvz2 modding tools.
 repacking the obb  
 packing/unpacking .rsgp (aka .pgsr) files  
 (maybe) converting .ptx files to .pngs
+# credits/thanks to:
+the plants vs zombies 2 quickbms script for helping me learn how the obb contains offsets and learn how the headers work
