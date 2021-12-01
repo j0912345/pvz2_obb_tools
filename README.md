@@ -1,7 +1,7 @@
 # read this
 these are tools for modding pvz2. 
 currently very incomplete,
-your currently best off looking at other places for pvz2 modding tools. 
+your currently best off looking at other places for pvz2 modding tools.  
 (or just the sunflower nation discord)
 # what you need to run
 1. python 3.10  
