@@ -12,7 +12,7 @@ your currently best off looking at other places for pvz2 modding tools.
 3. use a json file with those file names and add them back into the obb  
 # coming soon
 repacking the obb  
-packing/unpacking .rsgp (aka .pgsr) files  
+packing .rsgp (aka .pgsr) files + fixing bugs with extracting packages.rspg (aka .pgsr)  
 (maybe) converting .ptx files to .pngs
 # credits/thanks to:
 the plants vs zombies 2 quickbms script for:  
