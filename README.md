@@ -10,6 +10,7 @@ your currently best off looking at other places for pvz2 modding tools.
 1. unpack the obb  
 2. extract all of the file names and save them into a json file
 3. use a json file with those file names and add them back into the obb  
+4. unpack most pgsr (aka rsgp) files
 # coming soon
 repacking the obb  
 packing .rsgp (aka .pgsr) files + fixing bugs with extracting packages.rspg (aka .pgsr)  
