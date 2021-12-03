@@ -14,7 +14,7 @@ your currently best off looking at other places for pvz2 modding tools.
 # coming soon
 repacking the obb  
 packing .rsgp (aka .pgsr) files + fixing bugs with extracting packages.rspg (aka .pgsr)  
-(maybe) converting .ptx files to .pngs
+converting .ptx files to .pngs
 # credits/thanks to:
 the plants vs zombies 2 quickbms script for:  
 helping me learn how the obb contains offsets.  
