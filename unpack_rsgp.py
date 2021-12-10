@@ -1,12 +1,9 @@
-def unpack_rsgp_dir(json_dir, extra_messages=False):
+def unpack_rsgp_dir(extra_messages=False):
     import zlib
     import helpful_functions # one of my scripts, not a module 
     import os
     import json
 
-
-    with open(json_dir, "r") as json_file_list:
-        file_name_list=json.loads(json_file_list.read())
     current_file_name = input(r"where is the .rsgp file (aka pgsr file) you want to unpack: ")
     temp_file_name="temp_file_with_header_removed.zlib"
     global output_file_name
@@ -51,7 +48,7 @@ def unpack_rsgp_dir(json_dir, extra_messages=False):
         pgsr.seek(offset_offset)
         with open(temp_file_name, "w+b") as temp:
             for x in range(0, os.path.getsize(current_file_name)-offset_offset):
-                temp.write(pgsr.read(1))
+                temp.write(pgsr.read(1))            
     #       === decompress data ===
         with open(temp_file_name, "r+b") as temp:
             zobj = zlib.decompress(temp.read())
@@ -63,4 +60,4 @@ def unpack_rsgp_dir(json_dir, extra_messages=False):
         input("press enter to exit")
 
 if __name__ == '__main__':
-    unpack_rsgp_dir(json_dir=input(r"where is the json file name list (use extract_file_names.py if you don't have one): "), extra_messages=True)
+    unpack_rsgp_dir(extra_messages=True)
