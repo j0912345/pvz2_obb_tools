@@ -2,7 +2,7 @@
 these are tools for modding pvz2. 
 currently very incomplete,
 you're currently best off looking at other places for pvz2 modding tools.  
-(or just the sunflower nation discord)
+(or just the [sunflower nation discord](https://discord.gg/FBasnrE))
 # what you need to run
 1. python 3.10  
 2. numpy installed
