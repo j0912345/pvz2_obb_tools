@@ -1,0 +1,30 @@
+gets encrypted file offset from 0x2C (32 bit int)
+gets amount of pgsr files from 0x28 (32 bit int)
+autopool start offset 0x4C
+0x70 has the start offset the of folder and file list
+atlases has the images
+the first of the file name headers offset at 0x38 (not encrypted, has sub files, has image sizes)
+find group___AutoPool to get the last offset of autopool
+0xC has the first pgsr offset
+0x14 has the start of all of the subfiles/folders
+0x50 has the offset of the offset of the auto pool
+(0x85248 on my obb) after the dir list, a 32 bit int has the number of file names in the next area
+0x44 has a differnt dir list
+0x48 has the amount of files in the obb
+0x58 has the end of the autopool thing
+0x54 looks like it has a dif number of files
+0x10 + 0x14 has a new area in the dir list
+
+file names (maybe, not tested much)
+
+it seems like the file order doesn't matter
+
+next pgsr offset is at current pgsr offset + 40 + where the file data starts
+file data offset offset is at 40 + start of the current pgsr header offset
+
+the image size is at 0xF8 (248 and 252) (maybe wrong in other files)
+spcutil needs the info file in rspg.dir for remaking the header
+
+(in a rsgp/pgsr) 0x14 and 0x18 has one of the offset of the start of the zlib data
+
+0x48 in packages.rsgp has the offset of the next gsr header
