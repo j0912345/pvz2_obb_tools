@@ -27,4 +27,4 @@ spcutil needs the info file in rspg.dir for remaking the header
 
 (in a rsgp/pgsr) 0x14 and 0x18 has one of the offset of the start of the zlib data
 
-0x48 in packages.rsgp has the offset of the next gsr header
+0x48 in packages.rsgp has the offset of the next pgsr header
