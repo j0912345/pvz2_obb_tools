@@ -17,7 +17,7 @@ find group___AutoPool to get the last offset of autopool
 
 file names (maybe, not tested much)
 
-it seems like the file order doesn't matter
+it looks like the file order doesn't matter in the obb.
 
 next pgsr offset is at current pgsr offset + 40 + where the file data starts
 file data offset offset is at 40 + start of the current pgsr header offset
