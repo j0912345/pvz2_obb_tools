@@ -2,6 +2,7 @@ import numpy as np
 import json
 import time
 import extract_file_names # this is one of my scripts, not a module
+from time import sleep
 #                                                   this was made in python 3.10
 #               ==== setup values ====
 print("note to script modders: all of the offsets here are in base 10 and NOT hex!\nthat's not only because it's easy to work with, it's how they are stored in\nthe obb.\n\n")
@@ -47,6 +48,12 @@ def convert_data_to_32_bit_uint(var_name, offset_to_read_from, opened_file_name)
 
 def go_to_offset_from_current_offset(offset, opened_file_name):
     opened_file_name.seek(opened_file_name.tell()+offset)
+def do_X_backspaces(x):
+    bstr = ""
+    for x in range(0, x):
+        bstr = bstr+"\b"
+    print(bstr, end="")
+        
 
 with open(InputObbDir, "rb") as obb:
     first_file_offset = convert_data_to_32_bit_uint(first_file_offset, first_file_offset_offset, obb)
@@ -54,7 +61,10 @@ with open(InputObbDir, "rb") as obb:
     obb.seek(first_file_offset)
     #loop 1, read the header data then start loop 2, write the file data
     print("extracting files, this may take a bit...\n")
-    for files in range(0, len(file_names)):
+    fnameLEN = len(file_names)
+    i = -1
+    for files in range(0, fnameLEN):
+        i += 1
         #print(obb.tell())
         this_pgsr_start_offset = obb.tell()
         go_to_offset_from_current_offset(next_pgsr_offset_offset, obb)
@@ -64,9 +74,12 @@ with open(InputObbDir, "rb") as obb:
         #setup for loop 2
         obb.seek(this_pgsr_start_offset)
         with open(OutputObbDir+file_names[list_pos]+file_type, "w+b") as current_file:
-            for data in range(0, pgsr_data_size+next_pgsr_data_offset):
-                current_file.write(obb.read(1))
+#            for data in range(0, pgsr_data_size+next_pgsr_data_offset):
+            current_file.write(obb.read(pgsr_data_size+next_pgsr_data_offset))
+            current_file.close()
         list_pos=list_pos+1
+
+#        print(i)
 
 print("the pgsr files have been exrtacted successfully! extract time: "+str(round(time.time() - start_time, 2)))
 input("press enter to exit")
