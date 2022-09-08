@@ -5,7 +5,7 @@ you're currently best off looking at other places for pvz2 modding tools.
 like [this other repo](https://github.com/Nineteendo/PVZ2tools) or the [sunflower nation discord](https://discord.gg/FBasnrE)  
 # what you need to run
 1. python 3.10  
-2. numpy installed
+2. numpy installed (will be removed)
 # what it can do so far  
 1. unpack the obb  
 2. extract all of the file names and save them into a json file
