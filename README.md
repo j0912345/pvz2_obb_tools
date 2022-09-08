@@ -1,6 +1,6 @@
 # read this
 these are tools for modding pvz2. 
-currently very incomplete and not being worked on,
+they are currently very incomplete but I will start working on them again now.  
 you're currently best off looking at other places for pvz2 modding tools.  
 like [this other repo](https://github.com/Nineteendo/PVZ2tools) or the [sunflower nation discord](https://discord.gg/FBasnrE)  
 # what you need to run
