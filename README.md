@@ -11,5 +11,5 @@ like [this other repo](https://github.com/Nineteendo/PVZ2tools) or the [sunflowe
 3. use a json file with those file names and add them back into the obb  
 4. unpack most pgsr (aka rsgp) files
 # thanks to:
-the [plants vs zombies 2 quickbms script](http://aluigi.altervista.org/bms/1bsr_pgsr.bms) for some of the documentation
+the [plants vs zombies 2 quickbms script](http://aluigi.altervista.org/bms/1bsr_pgsr.bms) for some of the documentation  
 this [repo](https://github.com/Nineteendo/PVZ2tools/tree/master/OBBEdit) that documented more of the lbsr header struct
