@@ -1,13 +1,14 @@
-import numpy as np
 import json
 import time
 import extract_file_names # this is one of my scripts, not a module
+from func_table import * # same, this is one of my scripts
 from time import sleep
 #                                                   this was made in python 3.10
 #               ==== setup values ====
-print("note to script modders: all of the offsets here are in base 10 and NOT hex!\nthat's not only because it's easy to work with, it's how they are stored in\nthe obb.\n\n")
 InputObbDir=input("where is your obb that you want to extract: ")#"main.621.com.ea.game.pvz2_wha.obb"
 OutputObbDir=input(r"where should the obb be exrtacted: ")#"D:\coding\python\pvz2_obb_tools\zzzz_dumped_files\\"
+DontReadpgsrHead=get_bool_val(input("(for datamining) should the program ignore rspg/pgsr headers? (0 or 1, 0 is faster)"))
+print(DontReadpgsrHead)
 first_file_offset_offset=12
 first_file_offset="gets read in the obb as uint"
 next_pgsr_offset_offset=40
@@ -42,8 +43,7 @@ def convert_data_to_32_bit_uint(var_name, offset_to_read_from, opened_file_name)
 #    import numpy as np
     opened_file_name.seek(offset_to_read_from)
     var_name=opened_file_name.read(4)
-    var_name=np.frombuffer(var_name, dtype=np.uint32)
-    var_name=int(var_name)
+    var_name = int.from_bytes(var_name, "little", signed=False)
     return(var_name)
 
 def go_to_offset_from_current_offset(offset, opened_file_name):
