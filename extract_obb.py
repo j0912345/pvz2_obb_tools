@@ -5,10 +5,9 @@ from func_table import * # same, this is one of my scripts
 from time import sleep
 #                                                   this was made in python 3.10
 #               ==== setup values ====
+print("this program is free. if you paid for this, you got scammed.")
 InputObbDir=input("where is your obb that you want to extract: ")#"main.621.com.ea.game.pvz2_wha.obb"
-OutputObbDir=input(r"where should the obb be exrtacted: ")#"D:\coding\python\pvz2_obb_tools\zzzz_dumped_files\\"
-DontReadpgsrHead=get_bool_val(input("(for datamining) should the program ignore rspg/pgsr headers? (0 or 1, 0 is faster)"))
-print(DontReadpgsrHead)
+OutputObbDir=add_extra_slash_to_dir_str(input(r"where should the obb be exrtacted: "))#"D:\coding\python\pvz2_obb_tools\zzzz_dumped_files\\"
 first_file_offset_offset=12
 first_file_offset="gets read in the obb as uint"
 next_pgsr_offset_offset=40
@@ -17,14 +16,16 @@ this_pgsr_start_offset="not set yet"
 pgsr_data_size="not set yet"
 list_pos=0
 file_type=".rsgp"
+filename_list_json="obb_filename_cache.json"
 #               ==== start of the script ====
 
 has_json_file_names = input("do you have a json list of file names? (y/n)")#dumped_file_names.json
 if has_json_file_names == "y":
-    user_json_dir=input("where is the json file name list: ")
+    user_json_dir=filename_list_json #input("where is the json file name list: ")
+    print(f"loading {filename_list_json}")
 elif has_json_file_names == "n":
     print("\nthat's fine, i can make one for you")
-    json_file_name_dir=input("where should the list of file names be saved (with the file's name): ")
+    json_file_name_dir=filename_list_json #input("where should the list of file names be saved (with the file's name): ")
     print("")
     extract_file_names.make_json_file_name_list(InputObbDir = InputObbDir, OutputJsonDir = json_file_name_dir)
     user_json_dir=json_file_name_dir
