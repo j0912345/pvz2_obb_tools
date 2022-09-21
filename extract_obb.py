@@ -3,9 +3,11 @@ import time
 import extract_file_names # this is one of my scripts, not a module
 from func_table import * # same, this is one of my scripts
 from time import sleep
+# this program is free under the gpl-3 license. if you paid for this, you got scammed.
+# https://github.com/j0912345/pvz2_obb_tools
 #                                                   this was made in python 3.10
 #               ==== setup values ====
-print("this program is free. if you paid for this, you got scammed.")
+
 InputObbDir=input("where is your obb that you want to extract: ")#"main.621.com.ea.game.pvz2_wha.obb"
 OutputObbDir=add_extra_slash_to_dir_str(input(r"where should the obb be exrtacted: "))#"D:\coding\python\pvz2_obb_tools\zzzz_dumped_files\\"
 first_file_offset_offset=12
