@@ -1,3 +1,5 @@
+# this program is free under the gpl-3 license. if you paid for this, you got scammed.
+# https://github.com/j0912345/pvz2_obb_tools
 def convert_data_to_uint(var_name, offset_to_read_from, opened_file_name):
     import numpy as np
     opened_file_name.seek(offset_to_read_from)
