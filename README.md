@@ -1,7 +1,7 @@
 # read this
 name: PvModToolz2/PvModToolz (that's what I'm calling it for now)  
 these are tools for modding pvz2. 
-they are currently very incomplete but I will start working on them again now.  
+they are currently very incomplete.
 you're currently best off looking at other places for pvz2 modding tools.  
 like [this other repo](https://github.com/Nineteendo/PVZ2tools) or the [sunflower nation discord](https://discord.gg/FBasnrE)  
 # what you need to run
